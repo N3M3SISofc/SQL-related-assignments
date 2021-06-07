@@ -72,5 +72,3 @@ SELECT aircraft_code FROM aircrafts a
 WHERE NOT EXISTS (SELECT * FROM flights_v fv
 WHERE arrival_city LIKE 'Y%' AND status = 'Arrived' AND  NOT EXISTS (SELECT arrival_airport FROM flights_v fv2 
 WHERE fv.arrival_airport = fv2.arrival_airport AND a.aircraft_code = fv2.aircraft_code));
-
---10 Το όνομα του αεροδρομίου από το οποίο έχουν προγραμματιστεί να γίνουν οι περισσότερες πτήσεις μετά από τις 31/07/2017 [departure_airport_name].
